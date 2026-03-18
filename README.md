@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clipping Agency
+
+**The #1 Video Clipping & Content Distribution Network**
+
+🌐 **Domain:** [clippingagency.ai](https://clippingagency.ai)
+
+## About
+
+Clipping Agency is a video clipping and content distribution service for brands. We help brands scale their content across TikTok, Instagram Reels, X, and YouTube Shorts with our network of 65,000+ creators.
+
+## Tech Stack
+
+- **Framework:** Next.js 16
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Blog:** Ghost CMS (optional)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Vercel (Recommended)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Connect repo to Vercel
+2. Set domain to `clippingagency.ai`
+3. Configure DNS:
+   - A Record: `76.76.21.21`
+   - Or CNAME: `cname.vercel-dns.com`
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Copy `env.example` to `.env.local` and configure:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_PUBLIC_GA_ID=your-ga-id
+NEXT_PUBLIC_META_PIXEL_ID=your-pixel-id
+CONTACT_EMAIL=hello@clippingagency.ai
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO Keywords
 
-## Deploy on Vercel
+- Primary: "clipping agency"
+- Secondary: "video clipping service", "content clipping agency", "clip agency"
+- Long-tail: "video clipping network for brands", "content distribution service"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/
+├── page.tsx          # Homepage
+├── about/            # About page
+├── contact/          # Contact page
+├── casestudies/      # Case studies
+├── blog/             # Blog (Ghost CMS)
+└── layout.tsx        # Root layout with SEO
+public/
+├── index-main.html   # Main site content
+├── about.html        # About content
+├── contact.html      # Contact content
+└── casestudies.html  # Case studies content
+```
+
+## License
+
+Private - All rights reserved.
